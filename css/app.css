@@ -90,3 +90,13 @@ h2,p{
     from {top:-300px; opacity:0}
     to {top:0; opacity:1}
   }
+  #myBar {
+    position: absolute;
+    top:98vh;
+    left: 0;
+    width: 100vw;
+    height: 2vh;
+    background-color: #04AA6D;
+    text-align: center; /* To center it horizontally (if you want) */
+    line-height: 30px; /* To center it vertically */
+  }

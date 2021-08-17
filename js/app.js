@@ -98,8 +98,26 @@ const done = () => {
   count2.innerText = `${parseInt(count.innerText)}`;
 };
 
+let i = 60;
+function move() {
+  if (i == 60) {
+    var elem = document.getElementById("myBar");
+    var width = 100;
+    var id = setInterval(frame, 1000);
+    function frame() {
+      if (width <= 0) {
+        clearInterval(id);
+        i = 60;
+      } else {
+        width = width - 1.666;
+        elem.style.width = width + "%";
+      }
+    }
+  }
+}
+
 window.addEventListener("load", function () {
-  console.log("loaded");
+  move();
   var countdown = function (sec, tick, done) {
     var interval = setInterval(function () {
       if (sec < 0) {
